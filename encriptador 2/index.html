@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stile.css">
+    <title>Encriptador de Texto</title>
+
+</head>
+
+<body class="body">
+
+    <main class="main">
+        
+        <section class="entrada">
+
+
+            <div class="entrada-container">
+                <h1 id="texto" class="titulo">Encriptador de texto</h1>
+                    <div class="logo">
+                        <img src="Imagenes/Logo.png" alt="Logo Alura" class="logo-animation">
+                    </div>
+            
+                    <textarea id="texto-a-encriptar" class="campo-texto" placeholder="Aquí escribe tu texto a encriptar. Las mayúsculas se convertirán a minúsculas. &#10 &#10 Para reiniciar el encriptador puedes presionar culaquier botón dos veces."></textarea>
+            </div>
+        
+            <div class="btn">
+                <button class="btnEncriptar" id="btn-encriptar" onclick="btnEncriptar()">Encriptar</button>
+                <button  class="btnDesencriptar" onclick="btnDesencriptar()">Desencriptar</button>
+            </div>
+            
+        </section>
+
+    
+        <section class="salida">
+            
+            <div class="salida-container">
+                
+                <div class="munieco">
+                    <img src="imagenes/future-glasses.gif" alt="imagen Muñeco" class="munieco">
+                </div>
+
+                <textarea id="texto-encriptado" class="mensaje"  placeholder="Aqui verás el texto encriptado"></textarea>
+            
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

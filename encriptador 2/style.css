@@ -1,0 +1,305 @@
+/*animacion del logo*/
+@keyframes logo-animation {
+    0% {
+        transform: scale(0.1);
+    }
+
+    50% {
+        transform: scale(0.3);
+    }
+
+    100% {
+        transform: scale(0.1);
+    }
+}
+.body{
+    background-image:url("./imagenes/blackbackground.jpeg");
+}
+/*posicionando el logo*/
+.logo-animation {
+    position: absolute;
+    top: .2vh;
+    left: .2vh;
+    animation: logo-animation 5s infinite;
+
+}
+
+    .titulo {
+        box-sizing: border-box;
+    border: none;
+    font: normal 1em / normal "Sans-Serif", Helvetica, Comic Sans MS;
+    color: rgb(87 177 232);
+    text-decoration: none;
+    white-space: pre;
+    text-shadow: 0 0 10px rgb(72 28 71), 0 0 20px rgb(83 11 69), 0 0 30px #aa4a8a, 0 0 40px #181d00, 0 0 70px #191d00, 0 0 80px #1d1d00, 0 0 100px #1b1d00;
+    -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    width: 102%;
+    opacity: 5.5;
+    margin-top: 12%;
+    }
+
+.titulo:hover {
+    text-shadow: 0 0 10px rgb(0, 34, 7), 0 0 20px rgba(0, 34, 7),
+        0 0 30px rgba(0, 34, 7), 0 0 40px #000000, 0 0 70px #000000,
+        0 0 80px #000000, 0 0 100px #000000;
+}
+
+/*estilo del campo entrada*/
+.entrada {
+    padding-top: 9%;
+    text-align: center;
+}
+
+/*estilo campo salida*/
+.salida {
+    text-align: center;
+    font-size: 3em;
+    line-height: normal;
+
+}
+#btn-encriptar{
+    color: #2196F3;
+    background-color: darkblue;
+}
+.btnDesencriptar{
+    color: #1b1d00;
+    background-color:gray;
+}
+
+/*configuracion para pantallas pequeñas*/
+@media (max-width:320px) {
+    .body{
+        background-color: #000000; 
+    }
+    .main {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        height: 92vh;
+        background-color: transparent;
+        justify-content: center;
+    }
+
+    .titulo {
+        margin: 55px 10px;
+        float: right;
+    }
+
+    /*estilo de cuadro de texto de entrada*/
+    #texto-a-encriptar {
+        font-size: 15px;
+        font-weight: bold;
+        color: blue;
+        text-align: center;
+        width: 80%;
+        height: 50%;
+        background-color: white;
+        border: none;
+        margin-top: 90px;
+        opacity: 0.8;
+        border-radius: 20px;
+    }
+
+    /*estilo de botones*/
+    .btnEncriptar,
+    .btnDesencriptar {
+        color: white;
+        background-color: rgb(27, 10, 152);
+        font-size: 1em;
+        padding: 0.5em;
+        border: none;
+        border-radius: 20px;
+        margin-top: 20px;
+        align-self: center;
+
+    }
+
+    /*estilo de cuadro de texto de salida(encriptado)*/
+    #texto-encriptado {
+        font-size: 0.7em;
+        font-weight: bold;
+        color: rgb(48, 30, 244);
+        text-align: center;
+        width: 90%;
+        height: 15vh;
+        background-color: transparent;
+        border: none;
+        border-radius: 15px;
+    }
+
+    /*estilo cuadro entrada para pantallas pequeñas*/
+    .entrada {
+        position: relative;
+        background-color: transparent;
+        height: 50%;
+        text-align: center;
+    }
+
+    /*estilo efecto matrix pantalla pequeña*/
+    .efecto-matrix {
+        height: 10%;
+        display: flex;
+    }
+
+    /*estilo contenedor entrada pantalla pequeña*/
+    .entrada-container {
+        height: 80%;
+    }
+
+    /*estilo imagen  en el contendor de salida*/
+    .munieco {
+        float: right;
+        max-width: 200px;
+        /* Prevent the image from exceeding its original size (200px) */
+    }
+
+    /*estilo del contenedor de salida*/
+    .salida-container {
+        height: 50%;
+    }
+
+    /*estilo del campo salida*/
+    .salida {
+        -webkit-box-flex: 0.5;
+        -ms-flex: 0.5;
+        flex: 0.5;
+        margin-top: 1%;
+        height: 100%;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 25px;
+        text-align: center;
+    }
+}
+
+
+/*version tablets*/
+@media (min-width:768px) {
+    .body{
+        background-color: #000000;
+    }
+    /*estilo main en pantallas grandes*/
+    .main {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        background-color: transparent;
+        height: 92vh;
+        /* This will make the .main element take up the entire viewport height */
+        width: 100%;
+        /* This will make the .main element take up the entire viewport width */
+    }
+
+    .titulo {
+        float: right;
+        margin-top: 40px;
+    }
+
+    /*estilo  del contenedor de entrada*/
+    #texto-a-encriptar {
+        font-size: 17px;
+        font-weight: bold;
+        color: blue;
+        text-align: center;
+        width: 74%;
+        height: 62%;
+        background-color: #c1bcbc;
+        border-radius: 40px;
+        border: none;
+        margin-top: -26px;
+        padding: 0.5em;
+    }
+
+    /*estilo de botones en pantalla grande*/
+    .btnEncriptar,
+    .btnDesencriptar {
+
+        color: rgb(255, 255, 255);
+        background-color: rgb(86, 84, 98);
+        font-size: 0.5em;
+        padding: 0.5em;
+        border: none;
+        border-radius: 20px;
+        margin-top: 89px;
+        align-self: center;
+    }
+
+    /*comportamiento botones en pantalla grande*/
+    .btnEncriptar:hover,
+    .btnDesencriptar:hover {
+        background-color: rgb(3, 111, 30);
+        cursor: pointer;
+        transform: scale(1.1) translateY(-4px);
+        /* box-shadow: rgba(0, 0, 0, 0.8) 0px 7px 18px/0px, rgba(0,  0, 0, 0.9) -7px -7px 18px/0px;*/
+    }
+
+    /*estilo imagen en pantalla grande*/
+    .munieco {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+
+    /*estilo texto encriptado en pantalla grande*/
+    #texto-encriptado {
+        font-size: 15px;
+        font-weight: bold;
+        color: #000000e6;
+        text-align: center;
+        background-color: #9E9E9E;
+        border: none;
+        border-radius: 30px;
+        margin-top: 13px;
+        /* background-image: url("./imagenes/EXPEDIENTES\ DEL\ MISTERIO\ _.UN\ ENIGMÁTICO\ LUGAR...!!!!.gif"); */
+        background-repeat: no-repeat;
+        width: 100%;
+    }
+
+    /*estilo mensaje de salida en pantañla grande*/
+    .mensaje {
+        width: 90%;
+        height: 70%;
+    }
+
+    /*estilo cuadro de entrada en pantalla grande*/
+    .entrada {
+        -webkit-box-flex: 0.7;
+        -ms-flex: 0.7;
+        flex: 0.7;
+        /*height: 740px;*/
+        background-color: transparent;
+        border: 2px solid rgb(179, 179, 177);
+        border-radius: 50px;
+        color: rgb(44, 44, 133);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 40px;
+        text-align: center;
+    }
+
+    /*estilo de contenedor salida en pantalla grande*/
+    .salida-container {
+        height: 70%;
+    }
+
+    /*estilo de contenedor de entrada en pantalla grande*/
+    .entrada-container {
+        height: 284px;
+    }
+
+    /*estilo de contenedor salida*/
+    .salida {
+        -webkit-box-flex: 0.3;
+        -ms-flex: 0.3;
+        flex: 0.3;
+        border: 2px solid rgb(179, 179, 177);
+        border-radius: 50px;
+        color: rgb(4, 65, 7);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 40px;
+        text-align: center;
+    }
+}
